@@ -32,8 +32,8 @@ export default function EmployeeLogin() {
           <div className="login-header">
             <div className="login-icon-badge">
                <img src={dotrLogo} alt="DOTr Logo" className="login-logo" /> </div>
-            <div className="login-title">DOTr- Human Resource System</div>
-            <div className="login-subtitle">Sign in to access the Employee dashboard</div>
+            <div className="login-title">DOTr- Human Resource Information System</div>
+            <div className="login-subtitle">Sign in to access the Employee Information System</div>
           </div>
 
           {/* Error message */}
