@@ -1,12 +1,14 @@
-const express = require('express')
-const Routes = require('./routes/auth')
+const express = require('express');
+const authRoutes = require('./routes/auth');
 
 const app = express();
-const PORT = process.env.PORT;
 
 app.use(express.json());
 
-app.use('/api', Routes);
+app.get('/', (req, res) => {
+  res.json({ message: 'Backend is running!' });
+});
 
+app.use('/api/auth', authRoutes);
 
 module.exports = app;
