@@ -145,12 +145,11 @@
 
 .login-button {
   width: auto;
-  background-color: #0f172a;
+  background-color: #0038a8;
   color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
   border-radius: 35px;
   min-height: 44px;
   cursor: pointer;
@@ -159,7 +158,10 @@
 }
 
 .login-button:hover {
-  background-color: #1e293b;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 35px 0 #5c9af6;
+
+
 }
 
 .login-button:active {

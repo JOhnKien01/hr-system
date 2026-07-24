@@ -1,22 +1,30 @@
+import {useNavigate} from "react-router-dom";
 import { useState } from "react";
 import { Eye, EyeOff, Mail, Lock } from "lucide-react";
 import "../styles/pages/login.css";
 import dotrLogo from "../assets/Department_of_Transportation_(DOTr).png";
 
 export default function EmployeeLogin() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("admin");
+  const [password, setPassword] = useState("admin123");
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
+
+  const navigate = useNavigate();
 
   const handleLogin = () => {
     if (!email.trim() || !password.trim()) {
       setError("Enter your email address and password to continue.");
       return;
     }
-    setError("");
-    // Replace with real auth call
-    console.log("Logging in:", { email, password });
+   setError("");
+    // Temporary only 
+
+    localStorage.setItem("token", "sample_token");
+    
+   console.log("Logging in:", { email, password });
+
+    navigate("/dashboard");
   };
 
   const handleKeyDown = (e) => {
